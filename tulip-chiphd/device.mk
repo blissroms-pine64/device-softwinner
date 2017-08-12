@@ -48,7 +48,7 @@ PRODUCT_PACKAGES += \
     Camera \
     Bluetooth
     
-$(call inherit-product, vendor/ayufan-pine64/apps/vendor.mk)
+##$(call inherit-product, vendor/ayufan-pine64/apps/vendor.mk)
 
 DEVICE_PACKAGE_OVERLAYS += \
     device/softwinner/tulip-chiphd/overlay
