@@ -1,6 +1,5 @@
 $(call inherit-product, device/softwinner/tulip-common/tulip_64_bit.mk)
 $(call inherit-product, device/softwinner/tulip-common/tulip-common.mk)
-$(call inherit-product, frameworks/native/build/tablet-7in-xhdpi-2048-dalvik-heap.mk)
 $(call inherit-product, hardware/realtek/bluetooth/firmware/rtlbtfw_cfg.mk)
 $(call inherit-product, vendor/supersu/vendor.mk)
 
@@ -90,10 +89,6 @@ PRODUCT_COPY_FILES += \
 #PRODUCT_COPY_FILES += \
     device/softwinner/tulip-chiphd/hawkview/sensor_list_cfg.ini:system/etc/hawkview/sensor_list_cfg.ini
 
-# bootanimation
-PRODUCT_COPY_FILES += \
-    device/softwinner/tulip-chiphd/media/bootanimation.zip:system/media/bootanimation.zip
-
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.boot.console=console
 
@@ -105,7 +100,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=mtp,adb \
     ro.adb.secure=0 \
     rw.logger=0 \
-    persist.sys.root_access=2 # Allow ADB access only
+    persist.sys.root_access=3 # restore root and adb access
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.product.firmware=v1.2.5
@@ -179,9 +174,7 @@ PRODUCT_PACKAGES += Chrome \
     GoogleTTS \
     YouTube \
     PixelIcons \
-    PixelLauncher \
     Wallpapers \
-    PixelLauncherIcons \
     WebViewGoogle  
            
 GAPPS_FORCE_BROWSER_OVERRIDES := true
