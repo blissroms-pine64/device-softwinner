@@ -98,6 +98,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.fw.force_adoptable=1 \
     persist.sys.usb.config=mtp,adb \
+    ro.sf.lcd_density=120 \
     ro.adb.secure=0 \
     rw.logger=0 \
     persist.sys.root_access=3 # restore root and adb access
