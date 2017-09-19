@@ -1,6 +1,6 @@
 # Boot animation
-TARGET_SCREEN_HEIGHT := 1080
-TARGET_SCREEN_WIDTH := 1920
+TARGET_SCREEN_HEIGHT := 480	
+TARGET_SCREEN_WIDTH := 800
 
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/bliss/config/common.mk)
