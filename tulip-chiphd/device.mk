@@ -156,6 +156,17 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.usb.host.xml:system/etc/permissions/android.hardware.usb.host.xml \
     $(LOCAL_PATH)/subs/system/bin/aopt:system/bin/aopt \
 
+# Widevine DRM blobs
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/widevine/proprietary/libdrmframework.so:system/lib/arm/libdrmframework.so \
+    $(LOCAL_PATH)/widevine/proprietary/libdrmwvmplugin.so:system/vendor/lib/drm/libdrmwvmplugin.so \
+    $(LOCAL_PATH)/widevine/proprietary/libdrmdecrypt.so:system/vendor/lib/libdrmdecrypt.so \
+    $(LOCAL_PATH)/widevine/proprietary/liboemcrypto.so:system/vendor/lib/liboemcrypto.so \
+    $(LOCAL_PATH)/widevine/proprietary/libwvdrm_L1.so:system/vendor/lib/libwvdrm_L1.so \
+    $(LOCAL_PATH)/widevine/proprietary/libwvm.so:system/vendor/lib/libwvm.so \
+    $(LOCAL_PATH)/widevine/proprietary/libWVStreamControlAPI_L1.so:system/vendor/lib/libWVStreamControlAPI_L1.so \
+    $(LOCAL_PATH)/widevine/proprietary/libwvdrmengine.so:system/vendor/lib/mediadrm/libwvdrmengine.so \
+
 # Some CTS tests will be skipped based on what the initial API level that
 # shipped on device was.
 PRODUCT_PROPERTY_OVERRIDES += \
